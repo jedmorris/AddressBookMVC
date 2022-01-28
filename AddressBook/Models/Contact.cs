@@ -54,5 +54,10 @@ public class Contact
     
     public byte[]? ImageData { get; set; }
     public string? ImageType { get; set; }
+    
+    // Navigation Properties
+    public virtual AppUser? User { get; set; }
+
+    public virtual ICollection<Contact> Contacts { get; set; } = new HashSet<Contact>();
 
 }
