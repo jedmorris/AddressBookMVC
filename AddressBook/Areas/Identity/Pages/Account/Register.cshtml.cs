@@ -81,12 +81,10 @@ namespace AddressBook.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
-            [EmailAddress]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
             
             [Required]
-            [EmailAddress]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
             /// <summary>
@@ -126,6 +124,11 @@ namespace AddressBook.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+
+                // add first/last names to new instance of user
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
+                
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
