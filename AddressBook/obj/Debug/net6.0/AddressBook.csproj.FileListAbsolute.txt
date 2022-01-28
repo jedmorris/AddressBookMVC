@@ -61,3 +61,5 @@
 /Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/obj/Debug/net6.0/ref/AddressBook.dll
 /Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/obj/Debug/net6.0/AddressBook.pdb
 /Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/obj/Debug/net6.0/AddressBook.genruntimeconfig.cache
+/Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/bin/Debug/net6.0/Npgsql.dll
+/Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
