@@ -8,7 +8,6 @@ namespace AddressBook.Services.Interfaces;
 
         Task AddContactToCategoriesAsync(List<int> categoryList, int contactId);
 
-
         Task RemoveContactFromCategoryAsync(int categoryId, int contactId);
 
         Task<ICollection<Category>> GetContactCategoriesAsync(int contactId);
