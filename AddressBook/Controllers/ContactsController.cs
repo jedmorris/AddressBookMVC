@@ -8,14 +8,17 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AddressBook.Data;
 using AddressBook.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace AddressBook.Controllers
 {
     public class ContactsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
 
-        public ContactsController(ApplicationDbContext context)
+        public ContactsController(ApplicationDbContext context,
+                                  UserManager<AppUser> userManager)
         {
             _context = context;
         }
@@ -49,7 +52,11 @@ namespace AddressBook.Controllers
         // GET: Contacts/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+            // Removed line below to prevent new users from accessing current usr list
+            // ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
+
+            string userId = _userManager.GetUserId(User);
+            ViewData["CategoryLIst"] = new MultiSelectList(await _categoryService.GetUserCategoriesAsync(userId), "Id", "Name");            
             return View();
         }
 
