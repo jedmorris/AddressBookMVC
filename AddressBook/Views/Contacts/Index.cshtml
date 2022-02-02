@@ -102,6 +102,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.User.Id)
             </td>
+            
+            @* display the categories for the current contact user *@
+            @* <td> *@
+            @*    @foreach(var category in item!.categories) *@
+            @*    <p>@Category.Name</p> *@
+            @* </td> *@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

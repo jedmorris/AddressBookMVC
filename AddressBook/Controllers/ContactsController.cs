@@ -29,6 +29,8 @@ namespace AddressBook.Controllers
             var applicationDbContext = _context.Contacts.Include(c => c.User);
             return View(await applicationDbContext.ToListAsync());
         }
+        
+        
 
         // GET: Contacts/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -56,7 +58,7 @@ namespace AddressBook.Controllers
             // ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
 
             string userId = _userManager.GetUserId(User);
-            ViewData["CategoryLIst"] = new MultiSelectList(await _categoryService.GetUserCategoriesAsync(userId), "Id", "Name");            
+            // ViewData["CategoryLIst"] = new MultiSelectList(await _categoryService.GetUserCategoriesAsync(userId), "Id", "Name");            
             return View();
         }
 
