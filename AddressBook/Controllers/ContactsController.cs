@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using AddressBook.Data;
 using AddressBook.Models;
 using AddressBook.Services;
+using AddressBook.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 
 namespace AddressBook.Controllers
@@ -17,10 +18,12 @@ namespace AddressBook.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<AppUser> _userManager;
+        private readonly ICategoryService _categoryService;
         // private readonly SearchService _searchService;
 
         public ContactsController(ApplicationDbContext context,
-                                  UserManager<AppUser> userManager)
+                                  UserManager<AppUser> userManager,
+                                  ICategoryService categoryService)
         {
             _context = context;
             _userManager = userManager;
