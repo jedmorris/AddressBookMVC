@@ -67,13 +67,13 @@ namespace AddressBook.Controllers
         }
 
         // GET: Contacts/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             // Removed line below to prevent new users from accessing current usr list
             // ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
 
             string userId = _userManager.GetUserId(User);
-            // ViewData["CategoryLIst"] = new MultiSelectList(await _categoryService.GetUserCategoriesAsync(userId), "Id", "Name");            
+            ViewData["CategoryLIst"] = new MultiSelectList(await _categoryService.GetUserCategoriesAsync(userId), "Id", "Name");            
             return View();
         }
 
