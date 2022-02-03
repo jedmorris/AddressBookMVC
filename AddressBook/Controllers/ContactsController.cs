@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AddressBook.Data;
 using AddressBook.Models;
+using AddressBook.Services;
 using Microsoft.AspNetCore.Identity;
 
 namespace AddressBook.Controllers
@@ -16,11 +17,15 @@ namespace AddressBook.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<AppUser> _userManager;
+        private readonly SearchService _searchService;
 
         public ContactsController(ApplicationDbContext context,
-                                  UserManager<AppUser> userManager)
+                                  UserManager<AppUser> userManager,
+                                  SearchService _searchService)
         {
             _context = context;
+            _userManager = userManager;
+            // _searchService = SearchService;
         }
 
         // GET: Contacts
@@ -29,7 +34,15 @@ namespace AddressBook.Controllers
             var applicationDbContext = _context.Contacts.Include(c => c.User);
             return View(await applicationDbContext.ToListAsync());
         }
-        
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        // public IActionResult searchContacts(string searchString)
+        // {
+        //     var userId = _userManager.GetUserId(User);
+        //     var model = _searchService.SearchContacts(userId, searchString);
+        //     return View(nameof(Index), model);
+        // }
         
 
         // GET: Contacts/Details/5
