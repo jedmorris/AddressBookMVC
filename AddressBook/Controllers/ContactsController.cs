@@ -17,11 +17,10 @@ namespace AddressBook.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<AppUser> _userManager;
-        private readonly SearchService _searchService;
+        // private readonly SearchService _searchService;
 
         public ContactsController(ApplicationDbContext context,
-                                  UserManager<AppUser> userManager,
-                                  SearchService _searchService)
+                                  UserManager<AppUser> userManager)
         {
             _context = context;
             _userManager = userManager;
