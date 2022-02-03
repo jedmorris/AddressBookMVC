@@ -19,10 +19,10 @@ namespace AddressBook.Services
             if (!await IsContactInCategory(categoryId, contactId))
             {
 
-                var contact = await _context.Contacts.FindAsync(contactId);
+                Contact contact = (await _context.Contacts.FindAsync(contactId))!;
 
-                var category = await _context.Categories.FindAsync(categoryId);
-                if (category is not null && contact is not null)
+                Category category = (await _context.Categories.FindAsync(categoryId))!;
+                if (category != null && contact != null)
                 {
 
                     category.Contacts.Add(contact);
