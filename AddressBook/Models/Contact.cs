@@ -20,6 +20,7 @@ public class Contact
     public string? LastName { get; set; }
 
     [NotMapped]
+    // NotMapped means that this data does not need to be in the db
     public string? FullName { get { return $"{FirstName} {LastName}"; } }
     
     [DataType(DataType.Date)]
@@ -58,6 +59,6 @@ public class Contact
     // Navigation Properties
     public virtual AppUser? User { get; set; }
 
-    public virtual ICollection<Contact> Contacts { get; set; } = new HashSet<Contact>();
+    public virtual ICollection<Category> Categories { get; set; } = new HashSet<Category>();
 
 }
