@@ -1,7 +1,38 @@
 
+:root{
+    --dark-gs-color: #131313;
+    --light-gs-color: #ffffff;
+}
 
+
+.body{
+    color: white;
+}
 
 .pageBG{
     background: url("img/GlassBG/AbstractSpheres.png");
     background-size: cover;
+}
+
+/*default glass styling*/
+.glass-jm-style{
+    color: var(--light-gs-color);
+    backdrop-filter: blur(15px);
+    background-color: rgba(153,223,255, 0.178, 0.17);
+    border-radius: 10px;
+    /*styles below should not be altered*/
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255, 255, 255, 0.4) solid;
+    border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
+    border-right: 2px rgba(40, 40, 40, 0.35) solid;
+}
+
+/*dark glass*/
+.glass-jm-style.darkGlass{
+    color: var(--light-gs-color);
+}
+
+/*light glass */
+.glass-jm-style.lightGlass{
+    color: var(--dark-gs-color);
 }
