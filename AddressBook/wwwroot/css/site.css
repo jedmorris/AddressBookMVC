@@ -5,8 +5,7 @@
   --jm-secondary-color: #ff993b;
 }
 
-main{
-
+body{
   background-image: url("../img/Background/Dark Ocean.jpg") !important;
 }
 main>.container {
@@ -33,17 +32,10 @@ main>.container {
   background-color: var(--jm-secondary-color);
 }
 
-.checkListIcon{
-  color: var(--jm-secondary-color);
-}
-
-.dotnetIcon{
-  
-}
-
 .cSharpIcon{
   color: purple;
 }
+
 .jsIcon{
   color: gold;
 }
@@ -58,4 +50,8 @@ main>.container {
 
 .cssIcon{
   color: gold;
+}
+
+.githubIcon{
+  color: orangered;
 }
