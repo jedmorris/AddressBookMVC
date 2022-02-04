@@ -2,5 +2,6 @@
 
 
 .pageBG{
-    background: url();
+    background: url("img/GlassBG/AbstractSpheres.png");
+    background-size: cover;
 }
