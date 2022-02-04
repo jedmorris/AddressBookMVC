@@ -8,6 +8,19 @@
 body{
   background-image: url("../img/Background/Dark Ocean.jpg") !important;
 }
+
+.contactList-image{
+  max-width: 100%;
+  height: auto;
+}
+
+@media(min-width: 992px){
+
+  .contactList-image{
+    max-width: 200px;
+    height: auto;
+  }
+}
 main>.container {
   padding: 60px 15px 0;
   margin-bottom: 5rem;
