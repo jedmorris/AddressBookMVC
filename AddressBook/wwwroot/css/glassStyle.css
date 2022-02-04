@@ -48,6 +48,7 @@ a:visited,a:hover,a:active,a:focus{
 }
 
 .glass-button {
+    color: var(--light-gs-color);
     display: inline-block;
     border: 0;
     padding: 5px;
