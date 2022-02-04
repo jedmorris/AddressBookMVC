@@ -16,9 +16,9 @@
         <div class="row g-0">
             <div class="col-md-4i">
                 @* use imageService to include img added by user *@
-                <img src="@_imageService.ConvertByteArrayToFile(item.ImageData, item.ImageType)" class="contactList-image" alt="...">
+                @* <img src="@_imageService.ConvertByteArrayToFile(item.ImageData, item.ImageType)" class="contactList-image" alt="..."> *@
             </div>
-            <div class="col-md-8">
+            <div class="col-md-4">
                 <div class="card-body">
                     <h5 class="card-title">
                         @Html.DisplayFor(modelItem => item.FirstName)
@@ -43,3 +43,4 @@
             </div>
         </div>
     </div>
+}
