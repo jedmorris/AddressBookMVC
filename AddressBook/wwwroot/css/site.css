@@ -1,18 +1,61 @@
-html {
-  font-size: 14px;
+:root {
+  --jm-dark-color: #4f4f4f;
+  --jm-light-color: #eeeeee;
+  --jm-primary-color: #001E43;
+  --jm-secondary-color: #ff993b;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+main{
+
+  background-image: url("../img/Background/Dark Ocean.jpg") !important;
+}
+main>.container {
+  padding: 60px 15px 0;
+  margin-bottom: 5rem;
+  color: var(--jm-light-color);
+
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.bg-image {
+  width: 100vh;
+  height: 100vh;
 }
 
-body {
-  margin-bottom: 60px;
+.btn-outline-primary {
+  color: var(--jm-primary-color) !important;
+  border-color: var(--jm-secondary-color) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  border-color: var(--jm-primary-color) !important;
+  background-color: var(--jm-secondary-color);
+}
+
+.checkListIcon{
+  color: var(--jm-secondary-color);
+}
+
+.dotnetIcon{
+  
+}
+
+.cSharpIcon{
+  color: purple;
+}
+.jsIcon{
+  color: gold;
+}
+
+.bsIcon{
+  color: purple;
+}
+
+.htmlIcon{
+  color: orangered;
+}
+
+.cssIcon{
+  color: gold;
 }
