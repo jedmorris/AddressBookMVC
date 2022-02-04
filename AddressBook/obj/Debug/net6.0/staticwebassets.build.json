@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZRGmRPG86yiNWUY38Yf0l3EykWYXSCAG5SHLJ7k8kjs=",
+  "Hash": "eeaV8wjeSxTnSFm46X090Uj3FLbOLehl2KNNI4eAGvo=",
   "Source": "AddressBook",
   "BasePath": "_content/AddressBook",
   "Mode": "Default",
@@ -1103,6 +1103,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/wwwroot/img/Background/Dark Ocean.jpg",
+      "SourceId": "AddressBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/wwwroot/",
+      "BasePath": "_content/AddressBook",
+      "RelativePath": "img/Background/Dark Ocean.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/Background/Dark Ocean.jpg"
+    },
+    {
+      "Identity": "/Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/wwwroot/img/logos/HomePageLogo.png",
+      "SourceId": "AddressBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/wwwroot/",
+      "BasePath": "_content/AddressBook",
+      "RelativePath": "img/logos/HomePageLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/logos/HomePageLogo.png"
     },
     {
       "Identity": "/Users/slothmanking/Documents/Projects/CoderFoundry/atlas/AddressBook/AddressBook/wwwroot/js/site.js",
